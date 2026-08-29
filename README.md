@@ -11,10 +11,9 @@ Read [`GROK-REVIEW.md`](./GROK-REVIEW.md), then the files it lists. Advise. Do n
 See `public/edition/README.txt`. Type-only until Travis chooses chapters.
 
 ## Add Stripe from the phone
-1. Stripe app → Payment Links → £7.99, currency GBP.
-2. Copy the link.
-3. Paste it as `stripePaymentLink` in `src/content/edition.ts`.
-Until that link is in, Buy grants a preview copy so the lock can be tested.
+Payment Link is live (`stripePaymentLink` in `src/content/edition.ts`).
+Pay on Stripe, then return and open the copy on the signed-in account.
+
 
 ## Run
 ```

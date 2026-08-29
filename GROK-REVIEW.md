@@ -11,7 +11,7 @@ Target: people who will buy a sealed short edition now; a longer professional ed
 - Chapters are **sealed** until the signed-in account holds an entitlement.
 - One account: X, Google, or email — same licence.
 - Pictures are **off** until Travis drops them on chosen chapters (`hero` optional).
-- Stripe Payment Link is **empty**. Travis adds it from the Stripe app on the phone. Until then the till grants a **preview unlock** so the lock can be tested. Do not pretend cards are charging.
+- Stripe Payment Link is **live** (`buy.stripe.com` in `edition.ts`). Buy opens Stripe. After payment, the reader returns and opens the copy on the signed-in account. No webhook yet — advise if Travis should add one before volume.
 - Kokoro TTS is lazy: it must not load until Listen is pressed.
 - Contact form + Part II waitlist are public inbound, stored server-side.
 

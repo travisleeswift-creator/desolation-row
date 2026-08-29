@@ -7,13 +7,20 @@ import { Button } from "@/components/ui/button";
 
 export const Route = createFileRoute("/checkout")({ component: Checkout });
 
+function stripeHref(email: string | null, userId: string) {
+  const url = new URL(EDITION.stripePaymentLink);
+  if (email) url.searchParams.set("prefilled_email", email);
+  url.searchParams.set("client_reference_id", userId);
+  return url.toString();
+}
+
 function Checkout() {
   const { user, isPending } = useCurrentUserState();
   const navigate = useNavigate();
   const [owned, setOwned] = useState(false);
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const stripe = EDITION.stripePaymentLink;
+  const [wentToStripe, setWentToStripe] = useState(false);
 
   useEffect(() => {
     if (!user) return;
@@ -29,7 +36,7 @@ function Checkout() {
     return <Navigate to="/login" search={{ next: "/checkout" }} />;
   }
 
-  async function payPreview() {
+  async function openCopy() {
     setBusy(true);
     setError(null);
     try {
@@ -37,7 +44,7 @@ function Checkout() {
       setOwned(true);
       await navigate({ to: "/library" });
     } catch (err) {
-      setError(err instanceof Error ? err.message : "Purchase failed");
+      setError(err instanceof Error ? err.message : "Could not open the copy");
     } finally {
       setBusy(false);
     }
@@ -49,7 +56,7 @@ function Checkout() {
         <p className="font-sans text-[11px] uppercase tracking-[0.28em] text-crimson">The till</p>
         <h1 className="mt-1 font-display text-3xl uppercase tracking-wide">Buy the book</h1>
         <p className="mt-2 font-serif text-muted">
-          One account — X, Google, or email. The manuscript unlocks on{" "}
+          One account — X, Google, or email. Pay on Stripe. The manuscript unlocks on{" "}
           {user.primaryEmail ?? user.displayName ?? "this account"}.
         </p>
       </div>
@@ -82,23 +89,24 @@ function Checkout() {
         </div>
       ) : (
         <div className="grid gap-3">
-          {stripe ? (
-            <a
-              href={stripe}
-              className="inline-flex h-12 items-center justify-center bg-ink px-5 font-sans text-sm uppercase tracking-[0.18em] text-paper"
-            >
-              Pay {EDITION.priceLabel} with Stripe
-            </a>
-          ) : (
-            <Button size="lg" disabled={busy} onClick={() => void payPreview()}>
-              {busy ? "Unlocking your copy…" : `Preview unlock · ${EDITION.priceLabel}`}
+          <a
+            href={stripeHref(user.primaryEmail, user.id)}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => setWentToStripe(true)}
+            className="inline-flex h-12 items-center justify-center bg-ink px-5 font-sans text-sm uppercase tracking-[0.18em] text-paper"
+          >
+            Pay {EDITION.priceLabel} with Stripe
+          </a>
+          {wentToStripe ? (
+            <Button size="lg" variant="ghost" disabled={busy} onClick={() => void openCopy()}>
+              {busy ? "Opening your copy…" : "I've paid — open my copy"}
             </Button>
-          )}
+          ) : null}
           {error ? <p className="font-sans text-sm text-crimson">{error}</p> : null}
           <p className="font-sans text-[11px] leading-5 text-muted">
-            {stripe
-              ? "Stripe takes the card. After you pay, the book unlocks on this signed-in account."
-              : "Stripe is not plugged in yet. From the Stripe app on your phone: Payment Links → £7.99 → copy the link. Send that link and it replaces this preview till. Until then, this button unlocks a test copy so the lock and the reader can be checked."}
+            Stripe takes the card on Stripe's page. When it says paid, come back here and open the
+            book on this signed-in account. First time is fine — this is a real till.
           </p>
         </div>
       )}

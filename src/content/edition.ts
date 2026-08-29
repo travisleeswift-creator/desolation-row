@@ -12,8 +12,8 @@ export const EDITION = {
   productId: "edition",
   words: 10000,
   listenMins: 70,
-  /** Paste the Stripe Payment Link from the phone app. Empty = preview till only. */
-  stripePaymentLink: "",
+  /** Stripe Payment Link from the phone. Live till. */
+  stripePaymentLink: "https://buy.stripe.com/dRm9AM2j2dg7eKBeuvfw401",
   charity: {
     name: "Macmillan Cancer Support",
     share: "10%",
