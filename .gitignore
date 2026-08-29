@@ -1,0 +1,15 @@
+node_modules
+.vercel
+dist
+.output
+.data
+*.local
+.env
+.env.*
+.grok
+screenshots
+artifacts
+pglite-debug.log
+*.wasm
+*.data
+.DS_Store

@@ -1,0 +1,133 @@
+import type { PieceMeta } from "./types";
+
+/** Client-safe catalogue — titles and teasers only. Full text is server-gated. */
+export const CATALOG: PieceMeta[] = [
+  {
+    slug: "front-page",
+    kind: "chapter",
+    kicker: "Chapter 01",
+    title: "The Street Is the Front Page",
+    dek: "Luton after the last paper folded, and what a pavement still reports.",
+    readMins: 6,
+    free: false,
+    order: 1,
+  },
+  {
+    slug: "hostel",
+    kind: "chapter",
+    kicker: "Chapter 02",
+    title: "The Hostel That Wasn't",
+    dek: "A corridor, a clipboard, and the difference between a bed and a policy.",
+    readMins: 6,
+    free: false,
+    order: 2,
+  },
+  {
+    slug: "shop-model",
+    kind: "chapter",
+    kicker: "Chapter 03",
+    title: "The Shop Model",
+    dek: "Donated coats, professional narratives, and the profit of pity.",
+    readMins: 6,
+    free: false,
+    order: 3,
+  },
+  {
+    slug: "owns-the-story",
+    kind: "chapter",
+    kicker: "Chapter 04",
+    title: "Who Owns the Story",
+    dek: "When someone else gets paid to tell you who you were.",
+    readMins: 6,
+    free: false,
+    order: 4,
+  },
+  {
+    slug: "after-midnight",
+    kind: "chapter",
+    kicker: "Chapter 05",
+    title: "After Midnight",
+    dek: "The town after the last bus. What the daylight version leaves out.",
+    readMins: 6,
+    free: false,
+    order: 5,
+  },
+  {
+    slug: "wouldnt-print",
+    kind: "chapter",
+    kicker: "Chapter 06",
+    title: "The Paper They Wouldn't Print",
+    dek: "Gatekeepers, platforms, and a URL that cannot be pulped.",
+    readMins: 6,
+    free: false,
+    order: 6,
+  },
+  {
+    slug: "enterprise",
+    kind: "chapter",
+    kicker: "Chapter 07",
+    title: "Enterprise, Not Alms",
+    dek: "A social fund that sells work, not leftover jumpers.",
+    readMins: 6,
+    free: false,
+    order: 7,
+  },
+  {
+    slug: "after-the-edition",
+    kind: "chapter",
+    kicker: "Chapter 08",
+    title: "After the Edition",
+    dek: "What you do with a copy that belongs to you.",
+    readMins: 6,
+    free: false,
+    order: 8,
+  },
+  {
+    slug: "e-paper",
+    kind: "article",
+    kicker: "Dispatch",
+    title: "The E-Paper",
+    dek: "Why this edition is a paper you can put in a pocket, not a feed you fall into.",
+    readMins: 2,
+    free: true,
+    order: 101,
+  },
+  {
+    slug: "notes-from-the-desk",
+    kind: "article",
+    kicker: "Notebook",
+    title: "Notes from the Desk",
+    dek: "How an edition is assembled when the night editor is the person who also walked the route.",
+    readMins: 2,
+    free: false,
+    order: 102,
+  },
+  {
+    slug: "url-not-a-shop",
+    kind: "article",
+    kicker: "Format",
+    title: "A URL, Not a Shop",
+    dek: "Publish where it cannot be banned from the shelf.",
+    readMins: 3,
+    free: false,
+    order: 103,
+  },
+  {
+    slug: "invite",
+    kind: "article",
+    kicker: "Studio",
+    title: "Invite to the Studio",
+    dek: "Builders welcome. Jealousy is not a credential.",
+    readMins: 3,
+    free: false,
+    order: 104,
+  },
+];
+
+export function getMeta(slug: string): PieceMeta | undefined {
+  return CATALOG.find((p) => p.slug === slug);
+}
+
+export const CHAPTERS = CATALOG.filter((p) => p.kind === "chapter");
+export const ARTICLES = CATALOG.filter((p) => p.kind === "article");
+export const FREE_SLUGS = new Set(CATALOG.filter((p) => p.free).map((p) => p.slug));
