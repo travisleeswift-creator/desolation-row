@@ -12,18 +12,18 @@ function FrontPage() {
   return (
     <main className="grid gap-12">
       <section className="grid gap-8 lg:grid-cols-12">
-        <figure className="flex aspect-16/10 items-center justify-center border-2 border-ink bg-ink lg:col-span-7">
-          <div className="-rotate-2 border-4 border-[var(--color-tag)] px-5 py-8 text-center sm:px-8">
-            <p className="font-sans text-[10px] uppercase tracking-[0.4em] text-[var(--color-tag)]">
+        <figure className="flex aspect-16/10 min-w-0 items-center justify-center overflow-hidden border-2 border-ink bg-ink lg:col-span-7">
+          <div className="-rotate-2 border-4 border-[var(--color-tag)] px-4 py-6 text-center sm:px-8 sm:py-8">
+            <p className="font-sans text-[10px] uppercase tracking-[0.28em] text-[var(--color-tag)] sm:tracking-[0.4em]">
               {EDITION.genre}
             </p>
-            <p className="mt-2 font-display text-5xl uppercase leading-[0.85] text-paper sm:text-7xl">
+            <p className="mt-2 font-display text-[clamp(2.1rem,10vw,4.5rem)] uppercase leading-[0.85] text-paper">
               {EDITION.name}
             </p>
-            <p className="mt-2 font-display text-3xl uppercase tracking-wide text-crimson sm:text-4xl">
+            <p className="mt-2 font-display text-[clamp(1.4rem,6vw,2.25rem)] uppercase tracking-wide text-crimson">
               {EDITION.subtitle}
             </p>
-            <p className="mt-4 font-sans text-[10px] uppercase tracking-[0.28em] text-paper/70">
+            <p className="mt-4 font-sans text-[10px] uppercase tracking-[0.2em] text-paper/70">
               Travis Lee Swift · back page only
             </p>
           </div>
