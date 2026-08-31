@@ -1,9 +1,9 @@
-# A Life Uncensored
+# Desolation Row — Time's Up
 
 Travis Lee Swift asked SuperGrok to review this paper.
 
 ## What it is
-A PWA e-paper that publishes his memoir *A Life Uncensored* (£7.99). Genre: memoir. 10% of the price pledged by the author to Macmillan Cancer Support (not an official Macmillan publication).
+A PWA e-paper (*Desolation Row — Time's Up*, £7.99) that publishes Travis Lee Swift's memoir *A Life Uncensored*.
 
 ## What is live
 - Stripe Payment Link: `https://buy.stripe.com/dRm9AM2j2dg7eKBeuvfw401` (£7.99).

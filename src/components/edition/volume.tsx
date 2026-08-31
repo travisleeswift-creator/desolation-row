@@ -26,6 +26,9 @@ export function Volume({ chapters }: { chapters: PiecePreview[] }) {
       <p className="mt-1 font-display text-2xl uppercase tracking-wide text-crimson">
         {EDITION.subtitle}
       </p>
+      <p className="mt-2 font-sans text-[11px] uppercase tracking-[0.22em] text-muted">
+        The book · {EDITION.bookTitle}
+      </p>
       <p className="mt-3 font-serif italic text-muted">{EDITION.author}</p>
       <p className="mt-2 font-sans text-xs text-faint">
         {words.toLocaleString()} words · {chapters.length} chapters in this drop · {EDITION.copyright}

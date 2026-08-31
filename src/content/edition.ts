@@ -1,11 +1,12 @@
 export const EDITION = {
-  name: "A Life Uncensored",
-  masthead: "A Life Uncensored",
-  subtitle: "The Record",
+  name: "Desolation Row",
+  masthead: "Desolation Row",
+  subtitle: "Time's Up",
+  bookTitle: "A Life Uncensored",
   genre: "Memoir",
   author: "Travis Lee Swift",
   xHandle: "TravisSwif21600",
-  tagline: "A Life Uncensored. Travis Lee Swift. The record is now in his own hands.",
+  tagline: "Desolation Row — Time's Up. Travis Lee Swift.",
   priceLabel: "£7.99",
   pricePence: 799,
   currency: "GBP",
@@ -20,14 +21,14 @@ export const EDITION = {
     note: "Travis Lee Swift pledges 10% of this edition's price to Macmillan Cancer Support. This is not an official Macmillan publication.",
   },
   blurb:
-    "A Life Uncensored by Travis Lee Swift. Memoir. Eighteen chapters, open to read and listen. No paywall until Travis says so.",
+    "Desolation Row — Time's Up by Travis Lee Swift. The book inside is A Life Uncensored. Eighteen chapters, open to read and listen until Travis says so.",
   backPage: [
-    "This is A Life Uncensored.",
-    "Five years clean. A body that still keeps the score. Two names, two countries, one record. The work is what remains.",
+    "This is Desolation Row — Time's Up.",
+    "The book inside is A Life Uncensored. Eighteen chapters. Five years clean. A body that still keeps the score. Two names, two countries, one record.",
     "I am still here. I am still building. The record is now in my own hands.",
   ],
   shareLine:
-    "A Life Uncensored by Travis Lee Swift. Memoir. The record is now in his own hands.",
+    "Desolation Row — Time's Up by Travis Lee Swift. The book is A Life Uncensored.",
 } as const;
 
 export const REVIEWS: { quote: string; by: string }[] = [
