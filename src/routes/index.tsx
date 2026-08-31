@@ -24,14 +24,14 @@ function FrontPage() {
               {EDITION.subtitle}
             </p>
             <p className="mt-4 font-sans text-[10px] uppercase tracking-[0.2em] text-paper/70">
-              Travis Lee Swift · back page only
+              Travis Lee Swift · open to read and listen
             </p>
           </div>
         </figure>
         <div className="flex flex-col justify-between lg:col-span-5">
           <div>
             <p className="font-sans text-[11px] uppercase tracking-[0.28em] text-crimson">
-              {EDITION.genre} · back page only
+              {EDITION.genre} · chapters 13–18 in this paper
             </p>
             <h2 className="mt-2 font-display text-4xl uppercase leading-none tracking-wide">
               {EDITION.name}

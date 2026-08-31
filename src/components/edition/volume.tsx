@@ -21,7 +21,7 @@ export function Volume({ chapters }: { chapters: PiecePreview[] }) {
       </p>
       <p className="mt-3 font-serif italic text-muted">{EDITION.author}</p>
       <p className="mt-2 font-sans text-xs text-faint">
-        {words.toLocaleString()} words · eight chapters · graffiti edition
+        {words.toLocaleString()} words · {chapters.length} chapters in this drop · {EDITION.copyright}
       </p>
 
       <ListenBarLazy parts={parts} />

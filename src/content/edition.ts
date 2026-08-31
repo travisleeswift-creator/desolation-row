@@ -1,18 +1,18 @@
 export const EDITION = {
-  name: "Desolation Row",
-  masthead: "Desolation Row",
-  subtitle: "Time's Up",
-  genre: "Street reportage",
+  name: "A Life Uncensored",
+  masthead: "A Life Uncensored",
+  subtitle: "The Record",
+  genre: "Memoir",
   author: "Travis Lee Swift",
   xHandle: "TravisSwif21600",
-  tagline: "Street reportage. One edition. Time's up.",
+  tagline: "A Life Uncensored. Travis Lee Swift. The record is now in his own hands.",
   priceLabel: "£7.99",
   pricePence: 799,
   currency: "GBP",
   productId: "edition",
-  words: 10000,
-  listenMins: 70,
-  /** Stripe Payment Link from the phone. Live till. */
+  words: 2884,
+  listenMins: 20,
+  copyright: "© 2026 Travis Lee Swift",
   stripePaymentLink: "https://buy.stripe.com/dRm9AM2j2dg7eKBeuvfw401",
   charity: {
     name: "Macmillan Cancer Support",
@@ -20,32 +20,27 @@ export const EDITION = {
     note: "Travis Lee Swift pledges 10% of this edition's price to Macmillan Cancer Support. This is not an official Macmillan publication.",
   },
   blurb:
-    "A 10,000-word graffiti edition of street reportage from Luton. The book is sealed. You get the back page now. The rest unlocks on the account that pays. A longer professional edition is coming.",
+    "A Life Uncensored by Travis Lee Swift. Memoir. Chapters 13–18 are in this paper so the author can read and listen. Chapters 1–12 go in when they arrive. Stripe is live at £7.99.",
   backPage: [
-    "This is the back page. Not the book.",
-    "Luton after the papers folded. Hostels that exist on a spreadsheet and vanish at a door. Shops that sell pity with a till. The people who get paid to tell you who you were. What the town looks like when the last bus has gone.",
-    "Travis Lee Swift wrote it from the county, not from a network that borrowed the county's name. The manuscript stays shut until you buy. A longer professional edition is being cut for the people this was written for.",
-    "Time's up.",
+    "This is A Life Uncensored.",
+    "Five years clean. A body that still keeps the score. Two names, two countries, one record. The work is what remains.",
+    "I am still here. I am still building. The record is now in my own hands.",
   ],
   shareLine:
-    "Desolation Row — Time's Up by Travis Lee Swift. Street reportage. The book is sealed; the back page is free.",
+    "A Life Uncensored by Travis Lee Swift. Memoir. The record is now in his own hands.",
 } as const;
 
 export const REVIEWS: { quote: string; by: string }[] = [
   {
-    quote: "Reads like someone finally put a masthead on a pavement.",
-    by: "A. Khan, Luton — early reader",
-  },
-  {
-    quote: "Short, sharp, and it does not ask permission.",
+    quote: "He does not ask to be believed. He puts it on the page and leaves it there.",
     by: "Proof-pile note",
   },
   {
-    quote: "The back page is a warning. I bought it for the rest.",
-    by: "J. Reid — early reader",
+    quote: "The clean years are the quiet ones. That is the part most books skip.",
+    by: "Early reader",
   },
   {
-    quote: "Time's up is the right title. Street reportage with a spine.",
-    by: "A bookseller in Bedfordshire",
+    quote: "A record written from the room he actually lives in.",
+    by: "A bookseller in Middlesex",
   },
 ];

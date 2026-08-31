@@ -15,8 +15,9 @@ export const Route = createFileRoute("/book")({
 
 function BookPage() {
   const { owned, chapters } = Route.useLoaderData();
+  const open = owned || chapters.some((ch) => !ch.locked && ch.blocks.length > 0);
 
-  if (owned) {
+  if (open) {
     return (
       <main className="grid gap-12">
         <Volume chapters={chapters} />
