@@ -4,7 +4,7 @@ export const chapter: Piece = {
   kind: "chapter",
   kicker: "Chapter 16",
   title: "The Record",
-  dek: "The record is now in my own hands.",
+  dek: "I have been clean five years.",
   readMins: 1,
   free: true,
   order: 16,

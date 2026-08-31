@@ -4,7 +4,7 @@ export const chapter: Piece = {
   kind: "chapter",
   kicker: "Chapter 13",
   title: "Five Years Clean and the Present Body",
-  dek: "Five years off heroin, a body that still keeps the score, and the work that remains.",
+  dek: "I have been clean from heroin for over five years.",
   readMins: 3,
   free: true,
   order: 13,
@@ -15,7 +15,7 @@ export const chapter: Piece = {
     },
     {
       type: "p",
-      text: "Rave drugs found me young, right around the time schooling collapsed. The years that followed took more than they gave. In environments where fentanyl is stolen from neighbours' rooms and survival is daily negotiation, five years clean is not a small fact. It is simply true. I mention it and I keep moving. The work of staying clean is not dramatic. It is repetitive and quiet and mostly invisible. That is why it rarely gets the space it deserves on the page.",
+      text: "Rave drugs found me young, right around the time schooling collapsed. The years that followed took more than they gave. In environments where fentanyl is stolen from neighbours\u2019 rooms and survival is daily negotiation, five years clean is not a small fact. It is simply true. I mention it and I keep moving. The work of staying clean is not dramatic. It is repetitive and quiet and mostly invisible. That is why it rarely gets the space it deserves on the page.",
     },
     {
       type: "p",

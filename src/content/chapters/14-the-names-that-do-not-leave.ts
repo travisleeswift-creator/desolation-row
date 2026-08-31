@@ -4,14 +4,14 @@ export const chapter: Piece = {
   kind: "chapter",
   kicker: "Chapter 14",
   title: "The Names That Do Not Leave",
-  dek: "The older generation, the firms, and a child placed at the intersection with protection from neither.",
+  dek: "The names from the older generation never fully leave.",
   readMins: 1,
   free: true,
   order: 14,
   blocks: [
     {
       type: "p",
-      text: "The names from the older generation never fully leave. They sit in the memory the way the brick dust from the fireplace sits in the lungs. Steven Hostettler. Frederick Dennis Hostettler. Patrick McCann. Tony \"Squeaker\" McCann. Arthur McCann. Ollie McCann. Peter McCann the professional boxing judge. The Allens \u2014 Tony and Johnny. James \"Jimbo\" Carr and John Carr. Julie Sweeny. Paul Robinson. Maria Walsh Healy, the music-industry troubleshooter with Polydor and Universal ties, the fixer who cleaned up other people's messes. Richard \"Straff\" Cawthorne. Gary \"Gadget\" Cawthorne. Dave Ewing. Curtis Warren's name sits in the same wider orbit even if I never claimed the big seats.",
+      text: "The names from the older generation never fully leave. They sit in the memory the way the brick dust from the fireplace sits in the lungs. Steven Hostettler. Frederick Dennis Hostettler. Patrick McCann. Tony \u201cSqueaker\u201d McCann. Arthur McCann. Ollie McCann. Peter McCann the professional boxing judge. The Allens \u2014 Tony and Johnny. James \u201cJimbo\u201d Carr and John Carr. Julie Sweeny. Paul Robinson. Maria Walsh Healy, the music-industry troubleshooter with Polydor and Universal ties, the fixer who cleaned up other people\u2019s messes. Richard \u201cStraff\u201d Cawthorne. Gary \u201cGadget\u201d Cawthorne. Dave Ewing. Curtis Warren\u2019s name sits in the same wider orbit even if I never claimed the big seats.",
     },
     {
       type: "p",

@@ -4,7 +4,7 @@ export const chapter: Piece = {
   kind: "chapter",
   kicker: "Chapter 15",
   title: "Dual Names and the Public Record",
-  dek: "Two documents. Two countries. One body that never got to choose.",
+  dek: "In Poland there is a birth certificate under one name.",
   readMins: 1,
   free: true,
   order: 15,

@@ -10,8 +10,8 @@ export const EDITION = {
   pricePence: 799,
   currency: "GBP",
   productId: "edition",
-  words: 2884,
-  listenMins: 20,
+  words: 8896,
+  listenMins: 50,
   copyright: "© 2026 Travis Lee Swift",
   stripePaymentLink: "https://buy.stripe.com/dRm9AM2j2dg7eKBeuvfw401",
   charity: {
@@ -20,7 +20,7 @@ export const EDITION = {
     note: "Travis Lee Swift pledges 10% of this edition's price to Macmillan Cancer Support. This is not an official Macmillan publication.",
   },
   blurb:
-    "A Life Uncensored by Travis Lee Swift. Memoir. Chapters 13–18 are in this paper so the author can read and listen. Chapters 1–12 go in when they arrive. Stripe is live at £7.99.",
+    "A Life Uncensored by Travis Lee Swift. Memoir. Eighteen chapters, open to read and listen. No paywall until Travis says so.",
   backPage: [
     "This is A Life Uncensored.",
     "Five years clean. A body that still keeps the score. Two names, two countries, one record. The work is what remains.",

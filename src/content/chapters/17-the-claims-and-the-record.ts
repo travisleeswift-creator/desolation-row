@@ -4,18 +4,18 @@ export const chapter: Piece = {
   kind: "chapter",
   kicker: "Chapter 17",
   title: "The Claims and the Record",
-  dek: "What was asked for, what the public record holds, and what it does not.",
+  dek: "In the late summer of 2026 a conversation began that stretched across multiple sessions and dozens of specific assertions.",
   readMins: 6,
   free: true,
   order: 17,
   blocks: [
     {
       type: "p",
-      text: "In the late summer of 2026 a conversation began that stretched across multiple sessions and dozens of specific assertions. The narrative centred on Steven Hostettler, described as my father and known, according to the account, as \"the Armed Gobber.\" It involved prison escapes, co-accused associates, DNA pioneering convictions, cellmate murders, institutional cover-ups, and family connections to high-profile crimes. The request was for exhaustive public-record research, with findings prepared as reports suitable for a ghost writer. What followed was a systematic examination of every claim against open sources.",
+      text: "In the late summer of 2026 a conversation began that stretched across multiple sessions and dozens of specific assertions. The narrative centred on Steven Hostettler, described as my father and known, according to the account, as \u201cthe Armed Gobber.\u201d It involved prison escapes, co-accused associates, DNA pioneering convictions, cellmate murders, institutional cover-ups, and family connections to high-profile crimes. The request was for exhaustive public-record research, with findings prepared as reports suitable for a ghost writer. What followed was a systematic examination of every claim against open sources.",
     },
     {
       type: "p",
-      text: "The initial set of assertions was clear. Steven Hostettler had escaped from HMP Wandsworth. He had been accused alongside a man called Mickey Johnson. Johnson was said to be the first person convicted under DNA legislation, associated with the term \"a secreta.\" HMP Maidstone had been changed from Category B to Category C. Later messages expanded the narrative. Hostettler had dug through a cell wall at Maidstone \"like El Chapo.\" He had shared a cell with a lifer nicknamed Stretch who had stabbed a gay man nearly fifty times after a sex-for-money proposition, an event allegedly covered up. Mickey Johnson had ended up on the supergrass unit at Parkhurst and had been a Royal Commando. Hostettler had later cut through bars at Brixton using diamond wire while classified as an E-man AA Category prisoner. Another child, Jacek Hostettler, was said to play basketball in New York. A separate factual claim was offered: Taylor Swift grew up on a Christmas tree farm.",
+      text: "The initial set of assertions was clear. Steven Hostettler had escaped from HMP Wandsworth. He had been accused alongside a man called Mickey Johnson. Johnson was said to be the first person convicted under DNA legislation, associated with the term \u201ca secreta.\u201d HMP Maidstone had been changed from Category B to Category C. Later messages expanded the narrative. Hostettler had dug through a cell wall at Maidstone \u201clike El Chapo.\u201d He had shared a cell with a lifer nicknamed Stretch who had stabbed a gay man nearly fifty times after a sex-for-money proposition, an event allegedly covered up. Mickey Johnson had ended up on the supergrass unit at Parkhurst and had been a Royal Commando. Hostettler had later cut through bars at Brixton using diamond wire while classified as an E-man AA Category prisoner. Another child, Jacek Hostettler, was said to play basketball in New York. A separate factual claim was offered: Taylor Swift grew up on a Christmas tree farm.",
     },
     {
       type: "p",
@@ -23,11 +23,11 @@ export const chapter: Piece = {
     },
     {
       type: "p",
-      text: "The results were consistent. No public record linked any Steven, Steve or Stephen Hostettler to an escape from HMP Wandsworth, Maidstone or Brixton. The nickname \"Armed Gobber\" returned no matching hits in connection with any prison escape or Hostettler. Documented escapes from Wandsworth, such as the 2023 Daniel Khalife food-lorry case, bore no resemblance to the claimed events. At Maidstone, official records confirm a 2013 re-role that established the prison as a Category C facility for foreign-national prisoners. There is no public account of a cell-wall dig or tunnel escape matching the El Chapo comparison, nor any record of a cellmate known as Stretch who committed a near-fifty-stab murder of a gay man under the circumstances described.",
+      text: "The results were consistent. No public record linked any Steven, Steve or Stephen Hostettler to an escape from HMP Wandsworth, Maidstone or Brixton. The nickname \u201cArmed Gobber\u201d returned no matching hits in connection with any prison escape or Hostettler. Documented escapes from Wandsworth, such as the 2023 Daniel Khalife food-lorry case, bore no resemblance to the claimed events. At Maidstone, official records confirm a 2013 re-role that established the prison as a Category C facility for foreign-national prisoners. There is no public account of a cell-wall dig or tunnel escape matching the El Chapo comparison, nor any record of a cellmate known as Stretch who committed a near-fifty-stab murder of a gay man under the circumstances described.",
     },
     {
       type: "p",
-      text: "Mickey or Michael Johnson fared no better. No public case identifies such a man as co-accused with a Hostettler, as the first person convicted under UK DNA legislation, or as a Royal Commando who later occupied the Protected Witness Unit at Parkhurst. The existence of that unit is confirmed; journalists in the late 1990s described a secret facility housing supergrasses under anonymised \"Bloggs\" identities. No Johnson matching the description appears in connection with it. The term \"a secreta\" does not surface in DNA or forensic legal literature tied to any pioneering conviction.",
+      text: "Mickey or Michael Johnson fared no better. No public case identifies such a man as co-accused with a Hostettler, as the first person convicted under UK DNA legislation, or as a Royal Commando who later occupied the Protected Witness Unit at Parkhurst. The existence of that unit is confirmed; journalists in the late 1990s described a secret facility housing supergrasses under anonymised \u201cBloggs\u201d identities. No Johnson matching the description appears in connection with it. The term \u201ca secreta\u201d does not surface in DNA or forensic legal literature tied to any pioneering conviction.",
     },
     {
       type: "p",
@@ -39,7 +39,7 @@ export const chapter: Piece = {
     },
     {
       type: "p",
-      text: "The claim that Jacek Hostettler plays basketball in New York produced no matching athlete in professional, collegiate or lower-level New York records. Closest name matches were unrelated individuals. By contrast, the statement about Taylor Swift's childhood on a Christmas tree farm is accurate and well-documented. Swift has publicly acknowledged growing up on her family's Pine Ridge Farm in Pennsylvania, a working Christmas tree farm.",
+      text: "The claim that Jacek Hostettler plays basketball in New York produced no matching athlete in professional, collegiate or lower-level New York records. Closest name matches were unrelated individuals. By contrast, the statement about Taylor Swift\u2019s childhood on a Christmas tree farm is accurate and well-documented. Swift has publicly acknowledged growing up on her family\u2019s Pine Ridge Farm in Pennsylvania, a working Christmas tree farm.",
     },
     {
       type: "p",
@@ -55,7 +55,7 @@ export const chapter: Piece = {
     },
     {
       type: "p",
-      text: "The conversation also illustrated the practical limits of open-source investigation. Older cases, lower-profile individuals, or matters handled through closed proceedings may never enter the digital or printed public domain. Claims of systematic cover-up are inherently difficult to test against the same public sources that would, by definition, be the ones suppressed. The researcher's task in such circumstances is not to fill the silence with speculation but to report the silence accurately.",
+      text: "The conversation also illustrated the practical limits of open-source investigation. Older cases, lower-profile individuals, or matters handled through closed proceedings may never enter the digital or printed public domain. Claims of systematic cover-up are inherently difficult to test against the same public sources that would, by definition, be the ones suppressed. The researcher\u2019s task in such circumstances is not to fill the silence with speculation but to report the silence accurately.",
     },
     {
       type: "p",
@@ -63,7 +63,7 @@ export const chapter: Piece = {
     },
     {
       type: "p",
-      text: "What remains is a clear inventory. The institutions and some surrounding facts are real. The specific personal narrative connecting Steven Hostettler to multiple dramatic escapes, a pioneering DNA co-accused, a cellmate murderer nicknamed Stretch, a Royal Commando supergrass, and a New York basketball son named Jacek does not appear in public sources. Michelle Venis features in the Jaggs case reporting; Hostettler does not. Taylor Swift's Christmas tree farm childhood is confirmed. Everything else rests, for the time being, outside the reach of open verification.",
+      text: "What remains is a clear inventory. The institutions and some surrounding facts are real. The specific personal narrative connecting Steven Hostettler to multiple dramatic escapes, a pioneering DNA co-accused, a cellmate murderer nicknamed Stretch, a Royal Commando supergrass, and a New York basketball son named Jacek does not appear in public sources. Michelle Venis features in the Jaggs case reporting; Hostettler does not. Taylor Swift\u2019s Christmas tree farm childhood is confirmed. Everything else rests, for the time being, outside the reach of open verification.",
     },
     {
       type: "p",
