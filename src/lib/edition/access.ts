@@ -5,7 +5,7 @@ import { getSessionUser } from "@/lib/auth/verify.server";
 import { getSql } from "@/lib/db";
 import { EDITION } from "@/content/edition";
 import { countWords, type Piece, type PiecePreview } from "@/content/types";
-import { getMeta } from "@/content/meta";
+import { CHAPTERS, getMeta } from "@/content/meta";
 import { getPiece } from "./content.server";
 
 function assemble(slug: string, owned: boolean): PiecePreview | null {
@@ -64,6 +64,24 @@ export const loadOwnedPiece = createServerFn({ method: "GET" })
     `;
     return assemble(data.slug, rows.length > 0);
   });
+
+/** Whole volume: back-page only unless this account holds the edition. */
+export const loadBook = createServerFn({ method: "GET" }).handler(async () => {
+  const user = await getSessionUser();
+  let owned = false;
+  if (user) {
+    const sql = await getSql();
+    const rows = await sql<{ product_id: string }>`
+      select product_id from entitlements
+      where user_id = ${user.id} and product_id = ${EDITION.productId}
+    `;
+    owned = rows.length > 0;
+  }
+  const chapters = CHAPTERS.map((ch) => assemble(ch.slug, owned)).filter(
+    (p): p is PiecePreview => p != null,
+  );
+  return { owned, chapters };
+});
 
 export const getMyEntitlements = createServerFn({ method: "GET" })
   .middleware([authMiddleware])

@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { Link } from "@tanstack/react-router";
 import { Lock } from "lucide-react";
-import type { PiecePreview } from "@/content/types";
+import type { Block, PiecePreview } from "@/content/types";
 import { speakableText } from "@/content/types";
 import { EDITION } from "@/content/edition";
 import { buttonVariants } from "@/components/ui/button";
@@ -9,6 +9,56 @@ import { saveProgress } from "@/lib/edition/access";
 import { useCurrentUserState } from "@/lib/auth/use-current-user";
 import { ListenBarLazy } from "./listen-bar-lazy";
 import { cn } from "@/lib/utils";
+
+export function Blocks({ blocks, dropCap }: { blocks: Block[]; dropCap?: boolean }) {
+  return (
+    <>
+      {blocks.map((block, i) => {
+        if (block.type === "p") {
+          return (
+            <p key={i} className={cn("text-base leading-7 text-ink-soft", dropCap && i === 0 && "drop-cap")}>
+              {block.text}
+            </p>
+          );
+        }
+        if (block.type === "h") {
+          return (
+            <h3 key={i} className="pt-2 font-display text-xl uppercase tracking-wide">
+              {block.text}
+            </h3>
+          );
+        }
+        if (block.type === "pull") {
+          return (
+            <blockquote
+              key={i}
+              className="border-l-2 border-crimson py-1 pl-4 font-serif text-xl leading-snug italic text-ink"
+            >
+              {block.text}
+            </blockquote>
+          );
+        }
+        if (block.type === "figure") {
+          return (
+            <figure key={i} className="my-6">
+              <img
+                src={block.src}
+                alt={block.caption}
+                loading="lazy"
+                decoding="async"
+                className="w-full border border-rule object-cover"
+              />
+              <figcaption className="mt-2 font-sans text-xs tracking-wide text-muted">
+                {block.caption}
+              </figcaption>
+            </figure>
+          );
+        }
+        return null;
+      })}
+    </>
+  );
+}
 
 export function Reader({ piece }: { piece: PiecePreview }) {
   const parts = speakableText(piece.blocks);
@@ -46,49 +96,7 @@ export function Reader({ piece }: { piece: PiecePreview }) {
       ) : null}
 
       <div className={cn("mt-8 space-y-5", piece.locked && piece.blocks.length > 0 && "relative")}>
-        {piece.blocks.map((block, i) => {
-          if (block.type === "p") {
-            return (
-              <p key={i} className={cn("text-base leading-7 text-ink-soft", i === 0 && "drop-cap")}>
-                {block.text}
-              </p>
-            );
-          }
-          if (block.type === "h") {
-            return (
-              <h2 key={i} className="pt-2 font-display text-xl uppercase tracking-wide">
-                {block.text}
-              </h2>
-            );
-          }
-          if (block.type === "pull") {
-            return (
-              <blockquote
-                key={i}
-                className="border-l-2 border-crimson py-1 pl-4 font-serif text-xl leading-snug italic text-ink"
-              >
-                {block.text}
-              </blockquote>
-            );
-          }
-          if (block.type === "figure") {
-            return (
-              <figure key={i} className="my-6">
-                <img
-                  src={block.src}
-                  alt={block.caption}
-                  loading="lazy"
-                  decoding="async"
-                  className="w-full border border-rule object-cover"
-                />
-                <figcaption className="mt-2 font-sans text-xs tracking-wide text-muted">
-                  {block.caption}
-                </figcaption>
-              </figure>
-            );
-          }
-          return null;
-        })}
+        {piece.blocks.length > 0 ? <Blocks blocks={piece.blocks} dropCap /> : null}
 
         {piece.locked ? (
           <div className={cn(piece.blocks.length > 0 && "relative -mt-24 pt-24")}>

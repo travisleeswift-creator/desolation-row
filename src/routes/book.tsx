@@ -1,14 +1,29 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { CHAPTERS } from "@/content/meta";
 import { EDITION } from "@/content/edition";
+import { loadBook } from "@/lib/edition/access";
 import { buttonVariants } from "@/components/ui/button";
 import { Reviews } from "@/components/edition/reviews";
 import { ShareOnX } from "@/components/edition/share-x";
+import { Volume } from "@/components/edition/volume";
 import { cn } from "@/lib/utils";
 
-export const Route = createFileRoute("/book")({ component: BookPage });
+export const Route = createFileRoute("/book")({
+  loader: async () => loadBook(),
+  component: BookPage,
+});
 
 function BookPage() {
+  const { owned, chapters } = Route.useLoaderData();
+
+  if (owned) {
+    return (
+      <main className="grid gap-12">
+        <Volume chapters={chapters} />
+      </main>
+    );
+  }
+
   return (
     <main className="grid gap-12">
       <div className="grid gap-10 lg:grid-cols-12">
@@ -38,9 +53,8 @@ function BookPage() {
             ))}
           </div>
           <p className="mt-4 font-serif text-sm text-muted">
-            The rest of the manuscript is sealed. A longer professional edition is being cut for the
-            target audience. This copy is the graffiti edition — short, sharp, shut. Pictures go on
-            the chapters Travis chooses.
+            The rest of the manuscript is in this paper — sealed until you buy. Sign in, pay, and
+            the eight chapters open here as one book.
           </p>
 
           <h2 className="mt-10 border-b border-ink pb-2 font-sans text-[11px] uppercase tracking-[0.28em]">
@@ -49,11 +63,7 @@ function BookPage() {
           <ol>
             {CHAPTERS.map((ch) => (
               <li key={ch.slug} className="border-b border-rule">
-                <Link
-                  to="/read/$slug"
-                  params={{ slug: ch.slug }}
-                  className="block py-4"
-                >
+                <Link to="/read/$slug" params={{ slug: ch.slug }} className="block py-4">
                   <p className="font-sans text-[10px] uppercase tracking-[0.22em] text-muted">
                     {ch.kicker} · Sealed
                   </p>
