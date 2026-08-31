@@ -13,7 +13,14 @@ export function Volume({ chapters }: { chapters: PiecePreview[] }) {
       <p className="font-sans text-[11px] uppercase tracking-[0.28em] text-crimson">
         Your copy · {EDITION.genre}
       </p>
-      <h1 className="mt-2 font-display text-4xl uppercase leading-none tracking-wide">
+      <figure className="mt-3 overflow-hidden border-2 border-ink">
+        <img
+          src="/edition/cover.jpg"
+          alt={`${EDITION.name} by ${EDITION.author}`}
+          className="aspect-video w-full object-cover"
+        />
+      </figure>
+      <h1 className="mt-6 font-display text-4xl uppercase leading-none tracking-wide">
         {EDITION.name}
       </h1>
       <p className="mt-1 font-display text-2xl uppercase tracking-wide text-crimson">

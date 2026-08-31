@@ -1,6 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Desolation Row">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="A Life Uncensored">
   <rect width="32" height="32" fill="#f7f1e3"/>
-  <rect x="4" y="3" width="24" height="21" fill="#f0d000"/>
-  <path fill="#111111" fill-rule="evenodd" d="M8.5 5h6A8.5 8.5 0 0 1 14.5 22h-6V5zm4.2 4.8h1.4A3.7 3.7 0 0 1 14.1 17.2h-1.4V9.8z"/>
-  <rect x="4" y="25" width="24" height="4" fill="#e11d2e"/>
+  <text x="16" y="22" text-anchor="middle" font-family="Impact, Anton, sans-serif" font-size="20" fill="#111111">T</text>
+  <rect x="6" y="26" width="20" height="3" fill="#e11d2e"/>
 </svg>

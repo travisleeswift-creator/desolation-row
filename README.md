@@ -1,19 +1,17 @@
-# Desolation Row — Time's Up
+# A Life Uncensored
 
-Street reportage by **Travis Lee Swift**. A sealed 10,000-word graffiti edition. £7.99. 10% pledged to Macmillan Cancer Support (author's pledge, not an official Macmillan book).
+Memoir by **Travis Lee Swift**. Eighteen chapters. Open to read and listen until Travis says otherwise. £7.99. 10% pledged to Macmillan Cancer Support (author's pledge, not an official Macmillan book).
 
-Live paper: Front / Book / Articles / Contact / Buy. Back page is free. The manuscript unlocks on the account that pays.
+Live paper: Front / Book / Articles / Contact / Buy.
 
 ## For SuperGrok
 Read [`GROK-REVIEW.md`](./GROK-REVIEW.md), then the files it lists. Advise. Do not dump a rewrite.
 
-## Add pictures later
-See `public/edition/README.txt`. Type-only until Travis chooses chapters.
+## Pictures
+See `public/edition/README.txt`. Cover is Travis's lockup. Chapter pictures when he adds them.
 
-## Add Stripe from the phone
+## Stripe
 Payment Link is live (`stripePaymentLink` in `src/content/edition.ts`).
-Pay on Stripe, then return and open the copy on the signed-in account.
-
 
 ## Run
 ```
